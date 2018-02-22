@@ -10,7 +10,7 @@ export function getUser() {
   return {
     type: GET_USER,
     payload: axios
-      .get("/api/me")
+      .request({ url: "/api/me" })
       .then(response => response.data)
       .catch(err => err.message)
   };
